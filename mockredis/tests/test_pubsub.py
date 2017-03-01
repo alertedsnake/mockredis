@@ -16,4 +16,4 @@ class TestRedisPubSub(object):
         channel = 'ch#1'
         msg = 'test message'
         self.redis.publish(channel, msg)
-        eq_(self.redis.pubsub[channel], [msg])
+        eq_(self.redis.pubsub()[channel], [msg])
